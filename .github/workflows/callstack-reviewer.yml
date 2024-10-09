@@ -21,7 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Review PR
-        uses: callstackai/action@main
+        uses: callstackai/action@v1.0.7
         with:
           config: ${{ inputs.config }}
           head: ${{ inputs.head }}
+          openai_key: ${{ secrets.OPENAI_KEY_2 }}
+          export: /code/chats.json
+          channel: pre-release
+          tag: develop
